@@ -4,12 +4,21 @@
    \hfill - ChatGPT (emphasis mine)
 \end{frame}
 
-\begin{frame}{Three main types}
-   \begin{fullpageitemize}
-         \item \centering \largetext{Classification}
-         \item \centering \largetext{Segmentation}
-         \item \centering \largetext{Regression}
-      \end{fullpageitemize}
+\begin{frame}{By the end of this presentation, you should be able to \dots}
+   \begin{baseitemize}
+      \itemR List some ways that deep learning is being used for image processing in orthopaedics
+      \itemR Understand some of the basic neural network architectures, and how those fit into different tasks
+   \end{baseitemize}
+\end{frame}
+
+\begin{frame}{Three categories of deep learning applications}
+   \begin{center}
+            \begin{tabular}{p{0.3\linewidth}|p{0.6\linewidth}}
+               Classification & Identifying objects in images and determining membership in specific classes \pause \\ \hline
+               Segmentation & Labeling specific pixels of interest in an image based on desired mask \pause \\ \hline
+               Detection & Locating regions in images based on presence of specific object
+            \end{tabular}
+      \end{center}
 \end{frame}
 
 \framecard[colorblue]{{\color{white}\hugetext{EXAMPLES}}}
@@ -69,6 +78,37 @@
    \end{columns}
    \vfill
    \includegraphics[width=\linewidth]{images/hrnet-human-pose.png}
+\end{frame}
+
+\framecard[colorblue]{\color{white}\hugetext{WHAT \emph{IS} DEEP LEARNING FOR IMAGE PROCESSING?}}
+
+\begin{frame}{A basic definition}
+   \begin{columns}
+      \centering
+      \begin{column}{0.4\linewidth}
+         \begin{baseitemize}
+            \itemR Subset of machine learning using neural networks to imitate the visual system in the brain
+            \vspace{0.45in}
+            \itemR A set of algorithms that learn programs from data
+         \end{baseitemize}
+      \end{column}
+      \begin{column}{0.6\linewidth}
+         \centering
+            \includegraphics[width=0.8\columnwidth]{images/visual-nn.png}\\
+            \tiny{Cox and Dean, Neural Networks and Neuroscience-Inspired Computer Vision, 2014}
+      \end{column}
+   \end{columns}
+\end{frame}
+
+
+\begin{frame}{The architecture of a neural network}
+   \centering
+   \renewcommand{\arraystretch}{1.5}
+   \begin{tabular}{c|c}
+      \Large{Building Block} & \Large{Full Neural Network} \\ \hline \pause
+      \includegraphics[width=1in, valign=m,margin = 1pt]{images/neuron.png} & \includegraphics[width=1.25in, valign=m, margin = 1pt]{images/fcn.png} \\ \hline \pause 
+      \includegraphics[width = 1.3in, valign=m, margin = 1pt]{images/2d-convolution.png} & \includegraphics[width=1.85in, valign=m, margin = 1pt]{images/u-net.png}
+   \end{tabular}
 \end{frame}
 
 \begin{frame}{Open Source Fonts}
