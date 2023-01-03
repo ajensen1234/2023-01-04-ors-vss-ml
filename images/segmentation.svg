@@ -6,8 +6,8 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
-   sodipodi:docname="u-net.svg.2023_01_03_14_46_40.0.svg"
-   inkscape:export-filename="C:\Users\ajensen123\Documents\GitHub\2023-01-04-ors-vss-ml\images\u-net.png"
+   sodipodi:docname="segmentation.svg"
+   inkscape:export-filename="C:\Users\ajensen123\Documents\GitHub\2023-01-04-ors-vss-ml\images\segmentation.png"
    inkscape:export-xdpi="121"
    inkscape:export-ydpi="121"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -398,10 +398,10 @@
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="2880"
-     inkscape:window-height="1514"
-     inkscape:window-x="5749"
-     inkscape:window-y="799"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:showpageshadow="false"
      inkscape:pagecheckerboard="1" />
@@ -543,13 +543,18 @@
        xml:space="preserve"
        style="font-size:8.46667px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
        x="192.68103"
-       y="101.91832"
+       y="98.793724"
        id="text32591-4"><tspan
          sodipodi:role="line"
          id="tspan32589-3"
          style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'JetBrains Mono NL';-inkscape-font-specification:'JetBrains Mono NL Ultra-Bold';stroke-width:0.264583"
          x="192.68103"
-         y="101.91832">Output Layer</tspan></text>
+         y="98.793724">Segmentation</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'JetBrains Mono NL';-inkscape-font-specification:'JetBrains Mono NL Ultra-Bold';stroke-width:0.264583"
+         x="192.68103"
+         y="107.28603"
+         id="tspan1392">Mask</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.46667px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"

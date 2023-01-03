@@ -3,6 +3,10 @@
 \setbeamercolor{background canvas}{bg=colorlgray}
 \setbeamercolor{normal text}{fg=colorhgray}
 
+\usepackage{array}
+    \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+    \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
 % personal data
 \newcommand{\myTitle}{\color{colorblue}\largetext{Deep Learning for Image Processing in Orthopaedics}\\
 {\scriptsize ORS Virtual Scientific Session}
