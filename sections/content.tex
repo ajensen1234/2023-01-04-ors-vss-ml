@@ -9,7 +9,6 @@
       \itemR List some ways that deep learning is being used for image processing in orthopaedics
       \itemR Understand some of the basic neural network architectures, and how those fit into different tasks
       \itemR Have a few tips and tricks up your sleeve for getting started with these networks
-      \itemR
    \end{baseitemize}
 \end{frame}
 
@@ -17,8 +16,8 @@
    \renewcommand{\arraystretch}{2}
    \begin{center}
             \begin{tabular}{M{0.3\linewidth}|P{0.6\linewidth}}
-               \pause Classification & Identifying objects in images and determining membership in specific classes \pause \\ \hline
-               Segmentation & Labeling specific pixels of interest in an image based on desired mask \pause \\ \hline
+               \pause Segmentation & Labeling specific pixels of interest in an image \pause \\ \hline
+               Classification & Identifying objects in images and determining membership in specific classes \pause \\ \hline
                Detection & Locating regions in images based on presence of specific object
             \end{tabular}
       \end{center}
@@ -57,30 +56,19 @@
 \begin{frame}
    \centering
    \includegraphics[width=0.7\linewidth]{images/tka-classification-title.png}
-   \begin{columns}
-      \begin{column}{0.6\linewidth}
-         \includegraphics[width=\columnwidth]{images/tka-classification-authors.png}
-      \end{column}
-      \begin{column}{0.5\linewidth}
-         \includegraphics[width=\columnwidth]{images/tka-classification-universities.png}
-      \end{column}
-   \end{columns}
    \vfill
-   \includegraphics[width=0.65\linewidth]{images/tka-classification.png}
+   \includegraphics[width=0.85\linewidth]{images/tka-classification.png}
+   \vfill
+   \tiny{Karnuta et al., Journal of Arthroplasty, 2021\\ doi:10.1016/j.arth.2020.10.021}
 \end{frame}
 
 \begin{frame}
    \centering
-   \begin{columns}
-      \begin{column}{0.65\linewidth}
-         \includegraphics[width=\columnwidth]{images/hrnet-title.png}
-      \end{column}
-      \begin{column}{0.35\linewidth}
-         \includegraphics[width=\columnwidth]{images/hrnet-authors.png}
-      \end{column}
-   \end{columns}
+         \includegraphics[width=0.65\columnwidth]{images/hrnet-title.png}
    \vfill
    \includegraphics[width=\linewidth]{images/hrnet-human-pose.png}
+   \vfill
+   \tiny{Wang et al, Computer Vision and Image Understanding, 2021 \\ doi: 10.1016/j.cviu.2021.103225}
 \end{frame}
 
 \framecard[colorblue]{\color{white}\hugetext{WHAT IS DEEP LEARNING FOR IMAGE PROCESSING?}}
@@ -131,7 +119,110 @@
    \centering
    \includegraphics[width=0.8\linewidth]{images/segmentation.png}
 \end{frame}
-%\begin{frame}{Open Source Fonts}
+
+\framecard[colororange]{{\color{white}\hugetext{TIPS AND TRICKS}}}
+
+\begin{frame}{You Can't Outrun A Lack of Data}
+   \centering
+   \includegraphics[width=0.25\linewidth]{images/data_trap.png}
+   \vfill \tiny{https://xkcd.com/2582/}
+   \vfill
+   \includegraphics[width=0.7\linewidth]{images/augmentations.jpg}
+   \vfill \tiny{https://albumentations.ai/}
+
+\end{frame}
+
+\begin{frame}{Minimal Necessary Force}
+   \centering
+   \includegraphics[width=0.45\linewidth]{images/xkcd-ml.png}
+   \vfill \tiny{https://xkcd.com/1838/}
+\end{frame}
+
+\begin{frame}
+   \frametitle{Utilizing Historic Methods}
+   \centering
+   \begin{columns}
+      \begin{column}{0.25\linewidth}
+         \centering
+         \includegraphics[width=\columnwidth]{images/tasks.png}
+         \vfill \tiny{https://xkcd.com/1425/}
+      \end{column}
+      \begin{column}{0.75\linewidth}
+         \centering
+         \includegraphics[width=0.85\columnwidth]{images/perspective-projection.png}
+      \end{column}
+   \end{columns}
+\end{frame}
+
+\framecard[colororange]{{\color{white} \hugetext{GETTING STARTED}}}
+
+\begin{frame}
+   \frametitle{MONAI}
+   \centering
+   \includegraphics[width=0.68\linewidth]{images/monai.png}
+   \vfill \tiny{https://monai.io}
+
+\end{frame}
+
+\begin{frame}{Background Information}
+   \begin{baseitemize}
+      \itemR CS231n: Deep Learning for Computer Vision, Stanford University (http://cs231n.stanford.edu/, lectures on YouTube)
+      \itemR Andrew Ng Coursera Courses
+      \begin{baseitemize}
+         \itemR Machine Learning Specialization
+         \itemR Deep Learning Specialization
+      \end{baseitemize}
+   \end{baseitemize}
+\end{frame}
+
+\framecard[colororange]{{\color{white} \hugetext{CASE STUDY}}}
+
+\begin{frame}{The Problem}
+   \begin{baseitemize}
+      \itemR 20\% of patients recieving TKA are dissatisfied
+      \itemR Clinicians don't have the ability to routinely quantify joint kinematics
+      \begin{baseitemize}
+         \itemR They must rely on manual examination and static imaging
+         \itemR Historic methods of measuring joint kinematics require are too time consuming for routine clinical use
+      \end{baseitemize}
+   \end{baseitemize}
+   \vfill \pause Question: Can we automate the process of measuring joint kinematics in order to make these measurements clinically feasible?
+\end{frame}
+
+\begin{frame}{Joint Track Machine Learning: Data}
+   \centering
+   \begin{columns}
+      \begin{column}{0.4\linewidth}
+         \includegraphics[width=\columnwidth]{images/jtml-data.png}
+      \end{column}
+      \begin{column}{0.6\linewidth}
+         \includegraphics[width=\columnwidth]{images/jtml-segmentation.png}
+      \end{column}
+   \end{columns}
+\end{frame}
+
+\begin{frame}{Joint Track Machine Learning: Historic Methods and Minimal Necessary Force}
+   \centering
+   \includegraphics[width=0.7\linewidth]{images/jtml-pipeline.png}
+   \begin{columns}
+      \begin{column}{0.55\linewidth}
+         \centering
+         \includegraphics[width=\columnwidth]{images/jtml-nfd.png} 
+         \vfill 
+         \scalebox{0.35}{Wallace and Mitchell, Analysis of three-dimensional movement using Fourier descriptors, 1980} \\
+         \scalebox{0.35}{Wallace and Wintz, An efficient three-dimensional aircraft recognition algorithm using normalized fourier descriptors, 1980} \\
+         \scalebox{0.35}{Banks and Hodge, Accurate measurement of three-dimensional knee replacement kinematics using single-plane fluoroscopy, 1996} \\
+      \end{column}
+      \begin{column}{0.45\linewidth}
+         \centering
+         \includegraphics[width=0.7\columnwidth]{images/jtml-registered-implant.png}
+         \vfill
+         \scalebox{0.35}{Jones et al, Lipschitzian Optimization without the Lipschitz Constant, 1993}
+      \end{column}
+   \end{columns}
+\end{frame}
+
+\framecard[colororange]{{\color{white} \hugetext{THANK YOU\\ajensen123@ufl.edu}}}
 % \begin{fullpageitemize}
 %  \item {\montserratfont This is Montserrat}
 %  \item {\notosansfont This is Noto Sans}
